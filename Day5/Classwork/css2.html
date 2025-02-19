@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* here we use the selectors,the specificity order -id>class>element>universal selector. we cant use  selector for nested element */
+        /* the combinator selector are->1.Decendent selector ,2.child selector,3. Adjacent sibling ,4.General sibling selector */
+        /* Decendent.>>> div (space) other property */
+        /* Child>> parent>child  */
+        /* p{
+            background-color: bisque;
+            text-align: center;
+        }
+        .p3{
+            background-color: blue;
+            text-align: left;
+        }
+        #para{
+            background-color: green;
+            text-align: right;
+        }
+        *{
+            background-color: rosybrown;
+        } */
+        #main p{
+            background-color: bisque;
+            text-align: center;
+        } 
+        #parent3 >:nth-child(5){
+            background-color: blue;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <!-- decendent  -->
+   <div id="main"><p>chyan</p>
+    <div>
+        <p>grand child </p>
+    </div>
+    <div>
+        <p>graeat1 </p>
+        <p>great2</p>
+    </div>
+    
+</div>
+   <div><p>saikat</p></div>
+   <div><p class="p3 " id="para">sumon</p></div>
+
+   <div id="parent3">
+    <p class="child-para">devraj</p>
+    <h1>Heading 1</h1>
+    <h1>Heading 2</h1>
+    <p>hiiiiiii</p>
+    <p>heloooo</p>
+
+</div> 
+<div style="height: 300px;width: 300px;border: 1px solid gray;overflow: auto;"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam fugit sint mollitia dolores quidem asperiores doloremque, consectetur facere et tempora nisi explicabo velit aliquid aliquam, incidunt est eaque libero dolore.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam fugit sint mollitia dolores quidem asperiores doloremque, consectetur facere et tempora nisi explicabo velit aliquid aliquam, incidunt est eaque libero dolore.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam fugit sint mollitia dolores quidem asperiores doloremque, consectetur facere et tempora nisi explicabo velit aliquid aliquam, incidunt est eaque libero dolore.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam fugit sint mollitia dolores quidem asperiores doloremque, consectetur facere et tempora nisi explicabo velit aliquid aliquam, incidunt est eaque libero dolore.</p></div>
+</body>
+</html>

@@ -1,10 +1,24 @@
 {
     "configurations": [
         {
+            "name": "Attach to Edge",
+            "port": 9222,
+            "request": "attach",
+            "type": "msedge",
+            "webRoot": "${workspaceFolder}"
+        },
+        
+        {
             "type": "msedge",
             "name": "http://127.0.0.1:3000/Day2/Assignment/sample.html",
             "request": "launch",
             "url": "http://127.0.0.1:3000/Day2/Assignment/sample.html"
+        },
+        {
+            "type": "msedge",
+            "name": "http://127.0.0.1:3000/Day3/Assignment/Portfolio.html",
+            "request": "launch",
+            "url": "http://127.0.0.1:3000/Day3/Assignment/Portfolio.html"
         }
     ]
 }
