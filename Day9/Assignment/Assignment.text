@@ -1,0 +1,115 @@
+ Assignment -Day 9
+1. 
+let x = "5"; let y = 5; 
+console.log(x == y); 
+ ->> Ans .True as js firstly comapare as a string and convert the string as a number
+         this comparision give us a true result
+
+ console.log(x === y);
+ -->> Ans. "===" it means strict comparision so it give false.
+ ------------------------------------------------------------------------
+ 2️. How can you find the length of the longest word in this array? 
+const words = ["JavaScript", "Programming", "Function", "Hoisting"]; 
+// Write a function to get the longest word length 
+Ans>>> 
+  const words = ["JavaScript", "Programming", "Function", "Hoisting"];
+
+function getLongestWordLength(wordsArray) {
+  return wordsArray.reduce((maxLength, word) => {
+    return Math.max(maxLength, word.length);
+  }, 0);
+}
+
+console.log(getLongestWordLength(words)); // Output: 11
+------------------------------------------------------------------------------
+3️. What will be logged in the console? Explain your answer. 
+function testScope() { 
+    if (true) { 
+        var a = 1️0; 
+        let b = 2️0; 
+        const c = 3️0; 
+    } 
+    console.log(a); 
+    console.log(b); 
+    console.log(c); 
+} 
+testScope();
+Ans>>
+console.log(a); // This will log 10, because `a` is accessible throughout the function.
+console.log(b); // This will cause a ReferenceError because `b` is not accessible outside the `if` block.
+console.log(c); // This will cause a ReferenceError because `c` is not accessible outside the `if` block.
+-----------------------------------------------------------------------------------------
+4.Rewrite the function using const and fix the bug.
+var name = "John"; 
+function greet() { 
+    if (true) { 
+        var message = "Hello " + name; 
+    } 
+    console.log(message); 
+} 
+greet();
+
+Ans>> if we use const in case of var then it throw a reference error.
+     the problem became fix when console.log is in same block
+     const name = "John"; 
+function greet() { 
+    if (true) { 
+        const message = "Hello " + name; 
+        console.log(message); 
+    } 
+    
+} 
+greet();
+----------------------------------------------------------------------------------
+5. Convert this traditional function into an arrow function without changing the output. 
+function multiply(a, b) { 
+    return a * b; 
+} 
+Ans>>
+    const multiply = (a, b) => a * b;
+--------------------------------------------------------------------------------
+6️. What will be the output? Explain why. 
+const obj = { 
+    name: "Alice", 
+    sayHello: function() { 
+        setTimeout(() => { 
+            console.log("Hello, " + this.name); 
+        }, 1️000); 
+    } 
+}; 
+obj.sayHello();
+Ans>> After 1000ms this output came  Hello, Alice
+--------------------------------------------------------------------------------
+7️. What will be the output of this code? Explain why. 
+console.log(a); 
+var a = 1️0; 
+console.log(b); 
+let b = 2️0; 
+Ans>> output is token error , as var are in different scope and console cant express in other console
+----------------------------------------------------------------------------------------
+8️. Rearrange the following function so it works correctly, explaining the problem. 
+console.log(square(5)); 
+ 
+function square(n) { 
+    return n * n; 
+} 
+console.log(double(4️)); 
+ 
+var double = function(n) { 
+    return n * 2️; 
+};
+Ans>>>
+      console.log(square(5)); // This works fine
+
+function square(n) { 
+    return n * n; 
+} 
+
+var double = function(n) { 
+    return n * 2; 
+};
+
+console.log(double(4)); // Now this works correctly
+----------------------------------------------------------------
+
+
