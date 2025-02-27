@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Welcome to Movie HUNT 📲</h1><button type="button" id="view"><a href="movie.html">View Movie</a></button>
+    <div class="parent">
+        <h2>Add your Movie</h2>
+        <form id="userForm">
+            <input type="text" placeholder="Movie Name" id="movieName" required>
+            <input type="text" placeholder="Movie Description" id="movieDes" required>
+            <input type="date" placeholder="Movie Release Year" id="movieRel" required>
+            <input type="number" placeholder="IMDb Rating" id="movieRating" min="0" max="10" required>
+            <label for="select-genre">Select Genre of movie</label>
+            <select name="Genre" id="GenreSelect">
+                <option value="select"></option>
+                <option value="Action">Action</option>
+                <option value="Drama">Drama</option>
+                <option value="Sci-Fi">Science-Friction</option>
+                <option value="Horror">Horror</option>
+                <option value="Historic">Historic</option>
+                <option value="Biopic">Biopic</option>
+            </select>
+            <input type="url" placeholder="Movie Poster" id="movieposter" required>
+            <button type="submit">Submit</button>
+          
+        </form>
+        
+
+    </div>
+    
+   
+</body>
+</html>
+<script src="index.js"></script>
