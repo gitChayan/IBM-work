@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+    <div id="cart-container">
+        <table id="cart-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items"></tbody>
+        </table>
+        <p id="empty-cart">Your cart is empty! Add some products!</p>
+    </div>
+    
+    <button onclick="location.href='index.html'">Continue Shopping</button>
+    <button id="purchaseBtn">Complete Purchase</button>
+
+    <script>
+        // Initialize
+        document.addEventListener('DOMContentLoaded', renderCart);
+
+        // Render Cart
+        function renderCart() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const container = document.getElementById('cart-items');
+            const emptyMsg = document.getElementById('empty-cart');
+            
+            container.innerHTML = '';
+            emptyMsg.style.display = cart.length ? 'none' : 'block';
+
+            cart.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>
+                        <img src="${item.image}" alt="${item.name}" class="cart-img">
+                        ${item.name}
+                    </td>
+                    <td>$${item.price}</td>
+                    <td>${item.category}</td>
+                    <td>
+                        <button onclick="updateQuantity(${item.id}, -1)">-</button>
+                        ${item.quantity}
+                        <button onclick="updateQuantity(${item.id}, 1)">+</button>
+                    </td>
+                    <td><button onclick="removeItem(${item.id})">Remove</button></td>
+                `;
+                container.appendChild(row);
+            });
+        }
+
+        // Update Quantity
+        function updateQuantity(id, change) {
+            let cart = JSON.parse(localStorage.getItem('cart'));
+            const item = cart.find(i => i.id === id);
+            
+            item.quantity += change;
+            
+            if (item.quantity < 1) {
+                cart = cart.filter(i => i.id !== id);
+            }
+            
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCart();
+        }
+
+        // Remove Item
+        function removeItem(id) {
+            let cart = JSON.parse(localStorage.getItem('cart'));
+            cart = cart.filter(i => i.id !== id);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCart();
+        }
+
+        // Purchase
+        document.getElementById('purchaseBtn').addEventListener('click', () => {
+            localStorage.removeItem('cart');
+            alert('Thank you for your purchase!');
+            renderCart();
+        });
+    </script>
+</body>
+</html>
