@@ -4,3 +4,5 @@ Cart page
 ![image](https://github.com/user-attachments/assets/c8ef1828-ab1b-414d-949e-e3b191efd746)
 odder summary page
 ![image](https://github.com/user-attachments/assets/bcb60a13-8ffa-46aa-85f0-4c3152870408)
+debouncing
+![image](https://github.com/user-attachments/assets/edbff150-5ab4-4e10-a0d2-a8194e1c3e4a)
