@@ -1,0 +1,44 @@
+#navbar{
+    height: 120px;
+    background-color: rgb(190, 206, 136);
+    display: flex;
+    justify-content: space-between;
+}
+#navbar>h1{
+    margin-left: 15px;
+}
+#navbar>span{
+    margin-top: 60px;
+    margin-right: 20px;
+}
+button{
+    background-color: rgb(52, 119, 226);
+    font-size: 28px;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px;
+}
+button:hover{
+    background-color: greenyellow;
+}
+.form{
+    height: 400px;
+    width: 500px;
+    border: 3px solid blueviolet;
+    margin-top: 40px;
+    margin-left: 50px;
+
+}
+input{
+    width: 450px;
+    height: 50px;
+    margin-left: 20px;
+    margin-top: 20px;
+    color: black;
+    font-size: 20px;
+    
+}
+#button{
+    margin-left: 150px;
+    margin-top: 30px;
+}
