@@ -200,7 +200,7 @@ function showData(arr){
     
 }
 showData(data);
-let cart=[];
+let cart=JSON.parse(localStorage.getItem("cartData")) || [];
 
 function addTocart(el,index){
    
@@ -211,3 +211,43 @@ function addTocart(el,index){
     console.log(cart);
     // getData();
 }
+
+//debouncing 
+function debounce(func, delay) {
+  let timeoutId;
+  return (...args) => {
+    clearTimeout(timeoutId); // Reset the timer on every call
+    timeoutId = setTimeout(() => {
+      func.apply(this, args);
+    }, delay);
+  };
+}
+// Example: Debounce a search input
+let AllContent=document.getElementById("products");
+function getData(){
+  let query=document.getElementById("search").value.toLowerCase();
+  let filtered=data.filter(p=> p.name.toLowerCase().includes(query));
+  AllContent.innerHTML="";
+  showData(filtered);
+}
+const debouncedSearch = debounce(getData,500);
+
+
+//throttleing
+// function throttle(func, limit) {
+//   let lastRun = 0;
+//   return (...args) => {
+//     const now = Date.now();
+//     if (now - lastRun >= limit) {
+//       func.apply(this, args);
+//       lastRun = now;
+//     }
+//   };
+// }
+
+// // Example: Throttle a scroll event
+// const throttledScroll = throttle(() => {
+//   console.log("Scrolled!");
+// }, 200);
+
+// window.addEventListener("scroll", throttledScroll);

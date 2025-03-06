@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect</title>
+    <style>
+        .container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .small-box {
+            width: 200px;
+            height: 200px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.2em;
+        }
+
+        .large-box {
+            width: 400px;
+            height: 600px;
+            background-color: #FF5722;
+            position: absolute;
+            top: 0;
+            left: 220px;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2em;
+        }
+
+        .container:hover .large-box {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="small-box">Hover me!</div>
+        <div class="large-box">Welcome!</div>
+    </div>
+</body>
+</html>

@@ -166,6 +166,7 @@ function showData(arr){
     arr.forEach((el,index)=>{
         let productBox=document.createElement("div");//make a big box
         productBox.className="product-box";//applying css 
+        
         let heading = document.createElement("h3");
         heading.innerText=el.category;
     

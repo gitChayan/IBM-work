@@ -1,0 +1,11 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "Live Preview",
+			"workspacePath": "c:\\Users\\chaya\\OneDrive\\Documents\\IBM-Web devolopment",
+			"problemMatcher": [],
+			"label": "Live Preview: Run Server"
+		}
+	]
+}

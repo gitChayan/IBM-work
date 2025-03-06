@@ -24,9 +24,9 @@ function getData(){
         rating.innerText=el.rating;
          
         let button=document.createElement("button");
-        button.innerText="Purchase";
+        button.innerText="Delete";
         button.addEventListener("click",()=>{
-            purchase(el,index);
+            Delete(el,index);
 
         });
 
@@ -38,5 +38,14 @@ function getData(){
     });
 }
 getData();
+
+function Delete(el,index){
+    let deletedTtem=JSON.parse(localStorage.getItem("cartData"));
+    deletedTtem.splice(index,1);
+    document.getElementById("cart-items").innerHTML="";
+    localStorage.setItem("cartData",JSON.stringify(deletedTtem));
+    getData(deletedTtem);
+
+}
 
 

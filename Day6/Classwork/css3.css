@@ -36,8 +36,8 @@
     bottom: 120px;
     right: 20px;
     position: fixed;
-    /* visibility: hidden;
-   */
+    /* visibility: hidden; */
+  
 
 }
 .header{
@@ -48,8 +48,8 @@
     top: 10px;
     z-index: 1;
 }
-#child>p:hover{
-    visibility: visible;
+#parent p:hover .box p{
+   display: block;
 }
 #btn:hover{
     background-color: rgb(16, 98, 199);
