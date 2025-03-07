@@ -8,16 +8,15 @@ async function getData() {
     try {
         let data = await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=rating&q=${search_term}&type=video&videoCaption=any&videoDefinition=any&videoEmbeddable=true&videoLicense=any&maxResults=20&videoType=any&key=${API_KEY}`)
 
-        let res = await data.json()
+        let res = await data.json();
         console.log(res.items);
         showData(res.items)
     } catch (error) {
-        console.log(error)
+        console.log(error);
     }
 }
 
 getData();
-
 
 async function showData(arr){
     document.getElementById("loading").style.display="none"
