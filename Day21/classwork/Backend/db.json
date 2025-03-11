@@ -1,0 +1,43 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "9447",
+      "title": "fuck sumon",
+      "views": 0.7154419374407537
+    },
+    {
+      "id": "27ac",
+      "title": "hey chayan",
+      "views": 0.6638595742341076
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "Chayan": {
+    "name": "Chayan",
+    "age": 21
+  }
+}
