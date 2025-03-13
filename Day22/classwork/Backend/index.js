@@ -252,7 +252,7 @@ app.get("/data",(req,res)=>{
 
 });
 app.post("/login",(req,res)=>{
-    if(req.body.email=="chayansp3333@gmail.com" && req.body.password=="12345"){
+    if(req.body.email=="chayansp3333@gmail.com" && req.body.password=="Chayan@123"){
         res.status(200).send({"message":"Login Successfull"})
     }else{
         res.status(200).send({"messaage":"Login Failed"})
@@ -260,7 +260,7 @@ app.post("/login",(req,res)=>{
 
 });
 
-const PORT=8080;
+const PORT=1010;
 app.listen(PORT,()=>{
     console.log(`Server is running on port ${PORT}`);
 
