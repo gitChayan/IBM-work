@@ -106,10 +106,7 @@ body{
     width: 440px;
     /* border: 1px solid black; */
     cursor: pointer;
-    overflow: scroll;
-    
-
-   
+    overflow: scroll;   
 }
 #sbar .first div{
     height: 50px;
@@ -172,7 +169,7 @@ body{
     height: 350px;
     width: 550px;
     gap: 5px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 10px;
 }
 
@@ -182,4 +179,28 @@ body{
     height: 70%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.video>p{
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: bold;
+}
+#circle{
+    height: 50px;
+    width: 50px;
+    border-left: 5px solid rgb(202, 97, 97);
+    border-right: 5px solid rgb(67, 105, 187);
+    border-radius: 100%;
+    /* margin: auto; */
+    animation: spin 5s linear infinite ;
+    align-items: center;
+    margin-left: 750px;
+    margin-top: 400px;
+    box-shadow: 2px 2px 4px blueviolet;
+}
+@keyframes spin {
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
 }
